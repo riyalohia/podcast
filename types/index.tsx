@@ -35,3 +35,11 @@ export interface GenerateThumbnailProps {
 	imagePrompt: string;
 	setImagePrompt: Dispatch<SetStateAction<string>>;
 }
+
+export interface AudioProps {
+  title: string;
+  audioUrl: string;
+  author: string;
+  imageUrl: string;
+  podcastId: string;
+}

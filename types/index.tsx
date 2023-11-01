@@ -43,3 +43,8 @@ export interface AudioProps {
   imageUrl: string;
   podcastId: string;
 }
+
+export interface AudioContextType {
+  audio: AudioProps | undefined;
+  setAudio: React.Dispatch<React.SetStateAction<AudioProps | undefined>>;
+}

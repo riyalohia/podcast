@@ -48,3 +48,16 @@ export interface AudioContextType {
   audio: AudioProps | undefined;
   setAudio: React.Dispatch<React.SetStateAction<AudioProps | undefined>>;
 }
+
+export interface PodcastDetailPlayerProps {
+	audioUrl: string;
+	podcastTitle: string;
+	author: string;
+	isOwner: boolean;
+	imageUrl: string;
+	podcastId: Id<"podcasts">;
+	imageStorageId: Id<"_storage">;
+	audioStorageId: Id<"_storage">;
+	authorImageUrl: string;
+	authorId: string;
+  }

@@ -11,6 +11,14 @@ const Searchbar = () => {
   const router = useRouter(); 
   const pathname = usePathname();
 
+  const debouncedValue = useDebounce(search, 500);
+
+  useEffect(() => {
+    if(debouncedValue) {
+      router.push(`/discover?search=${debouncedValue}`)
+    } else if (!debouncedValue && pathname === '/discover') router.push('/discover')
+  }, [debouncedValue])
+
   return (
     <div className="relative mt-8 block">
       <Input 

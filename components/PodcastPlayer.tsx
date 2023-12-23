@@ -105,7 +105,16 @@ const PodcastPlayer = () => {
         className="w-full"
         max={duration}
       />
-
+      <section className="glassmorphism-black flex h-[112px] w-full items-center justify-between px-4 max-md:justify-center max-md:gap-5 md:px-12">
+        <audio
+          ref={audioRef}
+          src={audio?.audioUrl}
+          className="hidden"
+          onLoadedMetadata={handleLoadedMetadata}
+          onEnded={handleAudioEnded}
+        />
+        
+      </section>
     </div>
   );
 };

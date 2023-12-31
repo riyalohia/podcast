@@ -18,6 +18,7 @@ const Home = () => {
               imgUrl={imageUrl as string}
               title={podcastTitle}
               description={podcastDescription}
+              podcastId={_id}
             />
           ))}
         </div>

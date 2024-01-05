@@ -14,7 +14,9 @@ const Discover = ({ searchParams: { search} }: { searchParams : { search: string
   return (
     <div className="flex flex-col gap-9">
       <Searchbar />
-
+      <div className="flex flex-col gap-9">
+        
+      </div>
     </div>
   )
 }

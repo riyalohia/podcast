@@ -9,6 +9,8 @@ import { useQuery } from 'convex/react'
 import React from 'react'
 
 const Discover = ({ searchParams: { search} }: { searchParams : { search: string }}) => {
+  const podcastsData = useQuery(api.podcasts.getPodcastBySearch, { search: search || '' })
+
   return (
     <div className="flex flex-col gap-9">
       <Searchbar />

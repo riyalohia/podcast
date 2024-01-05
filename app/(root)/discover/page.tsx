@@ -1,11 +1,20 @@
-import React from "react";
+"use client"
 
-const Discover = () => {
-	return (
-		<div>
-			<h1 className="text-20 font-bold text-white-1">Discover</h1>
-		</div>
-	)
+import EmptyState from '@/components/EmptyState'
+import LoaderSpinner from '@/components/LoaderSpinner'
+import PodcastCard from '@/components/PodcastCard'
+import Searchbar from '@/components/SearchBar'
+import { api } from '@/convex/_generated/api'
+import { useQuery } from 'convex/react'
+import React from 'react'
+
+const Discover = ({ searchParams: { search} }: { searchParams : { search: string }}) => {
+  return (
+    <div className="flex flex-col gap-9">
+      <Searchbar />
+
+    </div>
+  )
 }
 
 export default Discover
